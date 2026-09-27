@@ -1,0 +1,25 @@
+# Abhängigkeiten (werden mit "npm install" wiederhergestellt)
+node_modules/
+**/node_modules/
+
+# Build- / Cache-Dateien von reveal.js
+reveal.js/react/dist
+reveal.js/react/demo/dist
+reveal.js/dist/reveal.es5.js
+.sass-cache/
+out/
+tmp/
+presentation/
+presentation.zip
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.idea/
+*.iml
+*.iws
+.vscode/
+.DS_Store
+Thumbs.db
