@@ -1,43 +1,223 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		/>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alibi – Pitch</title>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --ink:#172033;
+      --muted:#5f6b7a;
+      --accent:#2f6fed;
+      --line:#dbe2ee;
+      --card:#ffffff;
+      --ok:#21835b;
+      --warn:#b54747;
+    }
 
-		<title>reveal.js</title>
+    body{background:var(--bg);}
+    .reveal{font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;color:var(--ink);}
+    .reveal .slides{text-align:left;}
+    .reveal section{box-sizing:border-box;padding:56px 72px;}
+    .reveal h1,.reveal h2,.reveal h3{margin:0;color:var(--ink);letter-spacing:-.03em;text-transform:none;font-weight:750;}
+    .reveal h1{font-size:76px;line-height:.95;}
+    .reveal h2{font-size:52px;line-height:1.05;margin-bottom:28px;}
+    .reveal h3{font-size:26px;line-height:1.2;margin-bottom:8px;}
+    .reveal p{font-size:28px;line-height:1.35;margin:0 0 18px;color:var(--muted);}
+    .reveal small{color:var(--muted);}
+    .tag{display:inline-block;font-size:18px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px;}
+    .lead{font-size:32px;max-width:920px;}
+    .accent{color:var(--accent);}
+    .center{display:flex!important;flex-direction:column;justify-content:center;height:100%;}
+    .split{display:grid!important;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center;height:100%;}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px;}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 18px 42px rgba(23,32,51,.06);}
+    .card p{font-size:23px;margin:0;}
+    .list{list-style:none;margin:0;padding:0;}
+    .list li{font-size:29px;line-height:1.25;margin:0 0 18px;color:var(--ink);}
+    .list span{color:var(--muted);}
+    .paper{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;box-shadow:0 20px 50px rgba(23,32,51,.08);transform:rotate(-1.5deg);}
+    .paper .line{height:18px;border-bottom:2px solid var(--line);margin:22px 0;}
+    .paper .fake{font-size:42px;color:var(--accent);font-family:"Segoe Script","Bradley Hand",cursive;}
+    .warning{display:inline-block;margin-top:18px;padding:8px 14px;border-radius:999px;border:1px solid var(--warn);color:var(--warn);font-size:19px;font-weight:700;}
+    .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:38px;}
+    .step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;min-height:210px;}
+    .num{width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:22px;}
+    .step p{font-size:22px;margin:0;}
+    .mock{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 20px 50px rgba(23,32,51,.08);}
+    .mock-row{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:22px;align-items:center;}
+    .mock-row:last-child{border-bottom:0;}
+    .pill{font-size:16px;font-weight:750;border-radius:999px;padding:6px 12px;border:1px solid currentColor;white-space:nowrap;}
+    .ok{color:var(--ok);}.open{color:var(--muted);}.no{color:var(--warn);}
+    .sigbox{height:180px;border:2px dashed var(--line);border-radius:16px;background:linear-gradient(#fff,#fafbfe);display:flex;align-items:center;justify-content:center;margin-top:22px;}
+    .signature{font-size:58px;color:var(--accent);font-family:"Segoe Script","Bradley Hand",cursive;transform:rotate(-4deg);}
+    .barwrap{height:260px;display:flex;align-items:flex-end;gap:20px;border-bottom:2px solid var(--ink);margin-top:16px;}
+    .bar{flex:1;height:var(--h);background:var(--line);border-radius:8px 8px 0 0;position:relative;}
+    .bar.hi{background:var(--accent);}
+    .bar span{position:absolute;bottom:-36px;left:0;right:0;text-align:center;font-size:20px;color:var(--muted);}
+    .tech{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:34px;}
+    .tech .card{min-height:190px;}
+    .tech-name{font-size:24px;font-weight:800;color:var(--accent);margin-bottom:10px;}
+    .foot{position:absolute;left:72px;bottom:30px;font-size:17px;color:var(--muted);}
+    .final h2{font-size:74px;line-height:.98;}
+    .questions{font-size:54px!important;color:var(--accent)!important;margin-top:34px!important;}
+    .reveal .progress{color:var(--accent);}
+    .reveal .controls{color:var(--accent);}
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
 
-		<link rel="stylesheet" href="dist/reset.css" />
-		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+    <section class="center">
+      <span class="tag">HTL-Projekt</span>
+      <h1>Alibi</h1>
+      <p class="lead">Die digitale Entschuldigungsliste für Fehlstunden.</p>
+      <p>WebUntis → Schüler → Eltern → Lehrer</p>
+      <aside class="notes">Hallo, wir sind [Namen] und stellen euch unser Projekt Alibi vor.</aside>
+    </section>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <section class="center">
+      <span class="tag">Einstieg</span>
+      <h2>Wer hat schon mal einen Entschuldigungszettel verloren?</h2>
+      <aside class="notes">Wer hat schon mal einen Entschuldigungszettel verloren? Eben.</aside>
+    </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="dist/plugin/notes.js"></script>
-		<script src="dist/plugin/markdown.js"></script>
-		<script src="dist/plugin/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <section class="split">
+      <div>
+        <span class="tag">Problem</span>
+        <h2>Zettel sind langsam, unsicher und mühsam.</h2>
+        <ul class="list">
+          <li>Gehen verloren <span>oder werden vergessen.</span></li>
+          <li>Unterschriften <span>kann man fälschen.</span></li>
+          <li>Lehrer haben <span>viel Kontrollaufwand.</span></li>
+        </ul>
+      </div>
+      <div class="paper">
+        <h3>Entschuldigung</h3>
+        <div class="line"></div>
+        <p>Grund: krank</p>
+        <div class="line"></div>
+        <p>Unterschrift:</p>
+        <div class="fake">M. Muster</div>
+        <span class="warning">echt?</span>
+      </div>
+      <aside class="notes">Im Moment läuft das mit Zetteln: Die Eltern unterschreiben, und man gibt ihn beim KV ab. Die Zettel gehen verloren, Unterschriften kann man fälschen, und die Lehrer haben viel Arbeit mit dem Kontrollieren und Eintragen.</aside>
+    </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-			});
-		</script>
-	</body>
+    <section class="center">
+      <span class="tag">Lösung</span>
+      <h2>Alibi macht das digital.</h2>
+      <p class="lead">Die Fehlstunden kommen automatisch aus WebUntis.</p>
+      <div class="cards">
+        <div class="card"><h3>Automatisch</h3><p>Fehlstunden müssen nicht händisch übertragen werden.</p></div>
+        <div class="card"><h3>Übersichtlich</h3><p>Jeder sieht, was noch offen ist.</p></div>
+        <div class="card"><h3>Digital</h3><p>Kein Papier, keine verlorenen Zettel.</p></div>
+      </div>
+      <aside class="notes">Alibi macht das digital. Die Fehlstunden kommen automatisch aus WebUntis.</aside>
+    </section>
+
+    <section class="center">
+      <span class="tag">Ablauf</span>
+      <h2>Vom Fehlen bis zur Entschuldigung</h2>
+      <div class="flow">
+        <div class="step"><div class="num">1</div><h3>Schüler</h3><p>Sieht offene Stunden und reicht sie ein.</p></div>
+        <div class="step"><div class="num">2</div><h3>Eltern</h3><p>Bekommen die Anfrage im eigenen Account.</p></div>
+        <div class="step"><div class="num">3</div><h3>Lehrer</h3><p>Prüft und akzeptiert oder lehnt ab.</p></div>
+      </div>
+      <aside class="notes">Der Schüler sieht seine offenen Stunden und reicht sie ein. Die Eltern bekommen das in ihrem eigenen Account angezeigt.</aside>
+    </section>
+
+    <section class="split">
+      <div>
+        <span class="tag">Eltern</span>
+        <h2>Unterschreiben wie beim Paket.</h2>
+        <p class="lead">Direkt am Handy oder PC: mit Finger, Maus oder Touchpad.</p>
+      </div>
+      <div class="mock">
+        <h3>Offene Entschuldigung</h3>
+        <p>Montag, 14. September<br>1. bis 4. Stunde</p>
+        <div class="sigbox"><div class="signature">M. Muster</div></div>
+        <p style="font-size:20px;margin-top:16px;">Unterschrift Erziehungsberechtigte/r</p>
+      </div>
+      <aside class="notes">Dort unterschreiben sie direkt am Handy oder PC, so wie wenn man ein Paket annimmt.</aside>
+    </section>
+
+    <section class="split">
+      <div>
+        <span class="tag">Lehreransicht</span>
+        <h2>Die ganze Klasse auf einen Blick.</h2>
+        <div class="mock">
+          <div class="mock-row"><span>Anna B. · 2 Std.</span><span class="pill ok">unterschrieben</span></div>
+          <div class="mock-row"><span>Max M. · 4 Std.</span><span class="pill open">wartet</span></div>
+          <div class="mock-row"><span>Lena K. · 1 Std.</span><span class="pill ok">akzeptiert</span></div>
+          <div class="mock-row"><span>Tim R. · 6 Std.</span><span class="pill no">Attest fehlt</span></div>
+        </div>
+      </div>
+      <div>
+        <h3>Beispiel-Statistik</h3>
+        <p>Fehlt jemand auffällig oft am Montag?</p>
+        <div class="barwrap">
+          <div class="bar hi" style="--h:92%"><span>Mo</span></div>
+          <div class="bar" style="--h:35%"><span>Di</span></div>
+          <div class="bar" style="--h:28%"><span>Mi</span></div>
+          <div class="bar" style="--h:43%"><span>Do</span></div>
+          <div class="bar" style="--h:55%"><span>Fr</span></div>
+        </div>
+      </div>
+      <aside class="notes">Der Lehrer sieht dann die ganze Klasse auf einen Blick und kann jede Entschuldigung annehmen oder ablehnen, zum Beispiel wenn ein Attest fehlt. Dazu gibt's Statistiken, etwa ob jemand oft am Montag fehlt.</aside>
+    </section>
+
+    <section class="center">
+      <span class="tag">Weiterentwicklung</span>
+      <h2>Alibi gibt es schon — wir bauen es neu.</h2>
+      <div class="cards">
+        <div class="card"><h3>Attest-Upload</h3><p>Atteste sollen direkt hochgeladen werden können.</p></div>
+        <div class="card"><h3>Benachrichtigungen</h3><p>Offene Entschuldigungen gehen nicht mehr unter.</p></div>
+        <div class="card"><h3>WebUntis-API</h3><p>Die offizielle Schnittstelle ist bereits angefragt.</p></div>
+      </div>
+      <aside class="notes">Alibi gibt's schon, wir bauen es aber komplett neu. Dieses Jahr kommen auch ein Attest-Upload und Benachrichtigungen dazu. Außerdem wollen wir die offizielle WebUntis-Schnittstelle verwenden, die haben wir schon angefragt.</aside>
+    </section>
+
+    <section class="center">
+      <span class="tag">Technik</span>
+      <h2>Web-App mit modernem Stack</h2>
+      <div class="tech">
+        <div class="card"><div class="tech-name">Angular</div><h3>Frontend</h3><p>Oberfläche für Schüler, Eltern und Lehrer.</p></div>
+        <div class="card"><div class="tech-name">C# / ASP.NET Core</div><h3>Backend</h3><p>Logik, Login, Rollen und Schnittstellen.</p></div>
+        <div class="card"><div class="tech-name">PostgreSQL</div><h3>Datenbank</h3><p>Speichert Nutzer, Fehlstunden und Entschuldigungen.</p></div>
+      </div>
+      <aside class="notes">Zur Technik: Alibi ist eine Web-App. Das Frontend machen wir mit Angular und TypeScript, das Backend mit C# und ASP.NET Core, und die Daten speichern wir in PostgreSQL.</aside>
+    </section>
+
+    <section class="center final">
+      <span class="tag">Schluss</span>
+      <h2>Weniger Papier.<br>Mehr Überblick.</h2>
+      <p class="lead">Alibi macht Entschuldigungen einfacher, digitaler und nachvollziehbarer.</p>
+      <p class="questions">Danke. Fragen?</p>
+      <aside class="notes">Danke fürs Zuhören, habt ihr Fragen?</aside>
+    </section>
+
+  </div>
+</div>
+<script src="dist/reveal.js"></script>
+<script src="dist/plugin/notes.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1280,
+    height: 720,
+    margin: 0.05,
+    hash: true,
+    controls: true,
+    progress: true,
+    slideNumber: false,
+    transition: 'fade',
+    backgroundTransition: 'fade',
+    plugins: [ RevealNotes ]
+  });
+</script>
+</body>
 </html>
