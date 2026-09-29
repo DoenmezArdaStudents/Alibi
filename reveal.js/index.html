@@ -51,6 +51,12 @@
     .mock-row{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:22px;align-items:center;}
     .mock-row:last-child{border-bottom:0;}
     .pill{font-size:16px;font-weight:750;border-radius:999px;padding:6px 12px;border:1px solid currentColor;white-space:nowrap;}
+    .misstable{width:100%;border-collapse:collapse;font-size:20px;}
+    .misstable th{text-align:left;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#6b7686;font-weight:750;padding:0 12px 12px 0;}
+    .misstable td{padding:14px 12px 14px 0;border-top:1px solid var(--line);}
+    .misstable td:last-child,.misstable th:last-child{padding-right:0;}
+    .misstable .name{font-weight:750;white-space:nowrap;}
+    .misstable .pct{display:block;font-weight:750;color:#6b7686;font-size:17px;margin-top:2px;white-space:nowrap;}
     .ok{color:var(--ok);}.open{color:var(--muted);}.no{color:var(--warn);}
     .sigbox{height:180px;border:2px dashed var(--line);border-radius:16px;background:linear-gradient(#fff,#fafbfe);display:flex;align-items:center;justify-content:center;margin-top:22px;}
     .signature{font-size:58px;color:var(--accent);font-family:"Segoe Script","Bradley Hand",cursive;transform:rotate(-4deg);}
@@ -134,12 +140,15 @@
     <section class="split">
       <div>
         <span class="tag">Lehreransicht</span>
-        <h2>Die ganze Klasse auf einen Blick.</h2>
+        <h2>Analyse</h2>
         <div class="mock">
-          <div class="mock-row"><span>Anna B. · 2 Std.</span><span class="pill ok">unterschrieben</span></div>
-          <div class="mock-row"><span>Max M. · 4 Std.</span><span class="pill open">wartet</span></div>
-          <div class="mock-row"><span>Lena K. · 1 Std.</span><span class="pill ok">akzeptiert</span></div>
-          <div class="mock-row"><span>Tim R. · 6 Std.</span><span class="pill no">Attest fehlt</span></div>
+          <table class="misstable">
+            <tr><th>Schüler/in</th><th>1. Fach</th><th>2. Fach</th><th>3. Fach</th></tr>
+            <tr><td class="name">Anna B.</td><td>Mathematik <span class="pct">42%</span></td><td>Englisch <span class="pct">27%</span></td><td>Sport <span class="pct">15%</span></td></tr>
+            <tr><td class="name">Max M.</td><td>Deutsch <span class="pct">36%</span></td><td>Geschichte <span class="pct">24%</span></td><td>Mathematik <span class="pct">18%</span></td></tr>
+            <tr><td class="name">Lena K.</td><td>Sport <span class="pct">51%</span></td><td>Biologie <span class="pct">19%</span></td><td>Deutsch <span class="pct">12%</span></td></tr>
+            <tr><td class="name">Tim R.</td><td>Physik <span class="pct">45%</span></td><td>Mathematik <span class="pct">31%</span></td><td>Englisch <span class="pct">22%</span></td></tr>
+          </table>
         </div>
       </div>
       <div>
