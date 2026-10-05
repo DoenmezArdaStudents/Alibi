@@ -114,7 +114,7 @@ Dieses Konzept bringt uns vom aktuellen Zustand (Papierzettel, manuelle Kontroll
 |---|---|
 | Projektleitung | Arda Dönmez |
 | Backend-Verantwortung (ASP.NET Core) | Ernad und Daryan |
-| Frontend-Verantwortung (Angular) | Arda |
+| Frontend-Verantwortung (Angular) | Arda und Lorenz |
 | Datenbank-Verantwortung (PostgreSQL) | Lorenz |
 | Dokumentation/Präsentation | Arda |
 
