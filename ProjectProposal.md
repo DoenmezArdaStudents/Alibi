@@ -4,18 +4,10 @@
 **Fach:** SYP (Systementwicklungsprojekt), 4. Klasse HTL
 **Datum:** 30.09.2026
 **Team:** Arda Dönmez, Daryan Mamsaleh, Ernad Music, Lorenz Parzer
-> Diese Proposal folgt der Struktur der Vorlage `Unit02a_ProjectProposalPresentation.pptx`.
+
 
 ---
 
-## Zweck dieses Dokuments
-
-Dieses Project Proposal dient als Entscheidungsgrundlage für die Genehmigung des Projekts *Alibi*. Es beschreibt:
-
-- die **Notwendigkeit** des Projekts
-- die **Machbarkeit** des Projekts
-- die **Finanzierbarkeit** des Projekts
-- den **Markt- und wirtschaftlichen Effekt** des Projekts
 
 ## Inhaltsverzeichnis
 
