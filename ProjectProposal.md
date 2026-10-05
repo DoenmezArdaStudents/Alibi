@@ -1,8 +1,8 @@
 # Project Proposal – Alibi
 
-**Projekt:** Alibi – Digitale Entschuldigungsliste für Schulen
-**Fach:** SYP (Systementwicklungsprojekt), 4. Klasse HTL
-**Datum:** 30.09.2026
+**Projekt:** Alibi – Digitale Entschuldigungsliste für Schulen  
+**Fach:** SYP (Systementwicklungsprojekt), 4. Klasse HTL  
+**Datum:** 30.09.2026  
 **Team:** Arda Dönmez, Daryan Mamsaleh, Ernad Music, Lorenz Parzer
 
 
