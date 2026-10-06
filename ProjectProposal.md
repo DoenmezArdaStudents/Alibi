@@ -29,7 +29,7 @@ Schulen verwalten Entschuldigungen für Fehlzeiten von Schüler:innen aktuell gr
 - Lehrer:innen haben **viel manuellen Aufwand** beim Kontrollieren, Sammeln und Eintragen der Zettel in WebUntis.
 - Schüler:innen und Eltern haben **keine digitale Übersicht**, welche Fehlstunden noch offen bzw. unentschuldigt sind.
 
-Ein Vorgängerprojekt namens *Alibi* existiert bereits, ist aber technisch und konzeptionell nicht sauber genug umgesetzt. Das aktuelle Team plant daher einen **kompletten Neuaufbau**, diesmal mit klarer Planung und sauberer Architektur.
+Ein Vorgängerprojekt namens *Simple Excuse List* existiert bereits, ist aber technisch und konzeptionell nicht sauber genug umgesetzt. Das aktuelle Team plant daher einen **kompletten Neuaufbau**, diesmal mit klarer Planung und sauberer Architektur.
 
 **Gap:** Es fehlt eine zentrale, digitale Plattform, die WebUntis-Fehlzeiten automatisch mit einem einfachen, rechtssicheren Unterschriften- und Freigabeprozess zwischen Schüler:innen, Eltern und Lehrer:innen verbindet.
 
